@@ -9,3 +9,23 @@ function Camera:new(x,y)
   self.rotation = 0
   self.scaleY = 1
 end
+
+function Camera:move(dx, dy)
+  self.x = self.x + dx
+  self.y = self.y + dy
+end
+
+function Camera:set()
+  love.graphics.push()
+  love.graphics.rotate(-self.rotation)
+  love.graphics.translate(-self.x, -self.y)
+end
+
+function Camera:unset()
+  love.graphics.pop()
+end
+
+function Camera:move(dx, dy)
+  self.x = self.x + dx
+  self.y = self.y + dy
+end
