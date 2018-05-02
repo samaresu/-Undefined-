@@ -5,6 +5,11 @@ function Player:new(x, y)
   self.y = y or 0
 end
 
+function Player:draw()
+  --Player temporário
+  love.graphics.rectangle("fill", self.x, self.y, 20, 20)
+end
+
 function Player:update(dt, camera)
   local dx = 0
   local dy = 0

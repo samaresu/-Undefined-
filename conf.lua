@@ -1,3 +1,3 @@
 function setConf()
-  love.window.setMode(600, 600)
+  love.window.setMode(800, 800)
 end
